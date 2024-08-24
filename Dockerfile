@@ -1,5 +1,5 @@
-FROM ubuntu
-RUN apt update -y
-RUN apt install apache2 -y
+FROM amazonlinux:2
+RUN yum update -y
+RUN yum install httpd -y
 COPY . /var/www/html/
-CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
