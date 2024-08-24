@@ -1,20 +1,15 @@
+---
 version: "3.8"
 services:
-  pantaloons1:
-    image: abishnu08/pantaloons1:latest
+  youtube:
+    image: abishnu08/youtube:latest
     ports:
-      - "1111:80"
+      - 1111:80
     deploy:
       replicas: 3
-  pantaloons2:
-    image: abishnu08/pantaloons2:latest
+  pantaloon:
+    image: abishnu08/pantaloon:latest
     ports:
-      - "2222:80"
-    deploy:
-      replicas: 3
-  pantaloons3:
-    image: abishnu08/pantaloons3:latest
-    ports:
-      - "3333:80"
+      - 2222:80
     deploy:
       replicas: 3
